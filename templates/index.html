@@ -1,0 +1,15 @@
+
+<div class="container d-flex justify-content-center">
+    <div class="col-sm-9">
+        {{ range $key, $value := . }}
+        <hr>
+        <h2><a href="/edit?id={{$value.Id}}">{{ $value.Title }}</a></h2>
+        <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5>
+        <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
+        <p>{{ $value.Text }}</p>
+        <br><br>
+            <a href="/delete?id={{$value.Id}}">Delete</a>
+        {{ end }}
+    </div>
+</div>
+
